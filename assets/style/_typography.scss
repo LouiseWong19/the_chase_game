@@ -1,0 +1,13 @@
+@import "_variables.scss";
+
+$primary-font: 'Proza Libre', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+body{
+  font-family: $primary-font;
+}
+
+h1{
+  font-size: 35px;
+  text-align: center;
+}
