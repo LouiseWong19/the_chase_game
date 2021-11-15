@@ -30,17 +30,28 @@ body {
   border: 1px solid black;
 }
 .game #chaser-board {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 230px;
+  grid-template-rows: repeat(9, 40px);
 }
 .game #chaser-board .step {
+  display: flex;
   width: 230px;
   height: 40px;
   border: 1px solid black;
   text-align: center;
+  background-color: #FFFDF9;
+  align-items: center;
+  justify-content: center;
+}
+.game #chaser-board .step:first-child {
+  background-color: #FF4646;
+}
+.game #chaser-board .step:nth-child(3) {
+  background-color: #7FCD91;
 }
 .game #question-board {
-  margin-top: 10px;
+  margin: 10px 0;
   padding: 25px;
   background-color: #FFFDF9;
   display: grid;
@@ -53,6 +64,7 @@ body {
 .game .question-box {
   grid-row: 1/3;
   grid-column: 1/3;
+  border: 1px solid black;
 }
 .game .option {
   border-radius: 10px;

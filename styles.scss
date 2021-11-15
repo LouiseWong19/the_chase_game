@@ -14,20 +14,33 @@
   border: 1px solid black;
 
   #chaser-board{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 230px;
+    grid-template-rows: repeat(9,40px);
     .step{
+      display: flex;
       width: 230px;
       height: 40px;
       border: 1px solid black;
       text-align: center;
+      background-color: $tertiary-color;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child{
+        background-color: $secondary-color;
+      }
+      
+      &:nth-child(3){
+        background-color: $primary-color;
+      }
     }
   
 
   }
 
   #question-board{
-    margin-top: 10px;
+    margin: 10px 0;
     padding: 25px;
     background-color: $tertiary-color;
     display: grid;
@@ -41,16 +54,12 @@
     .question-box{
       grid-row: 1 / 3;
       grid-column: 1 / 3;
-
+      border: 1px solid black;
     }
 
     .option{
       border-radius: 10px;
     }
-
-
-    
-  
 
 
 }
