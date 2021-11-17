@@ -51,7 +51,7 @@
     padding: 25px;
     background-color: $tertiary-color;
     display: grid;
-    grid-template-columns: 120px 120px;
+    grid-template-columns: 130px 130px;
     grid-template-rows: 30px 30px 30px 30px;
     row-gap: 30px;
     column-gap: 38px;
@@ -65,7 +65,16 @@
       text-align: center;
     }
 
-    .option__btn{
+    .optionA__btn{
+      border-radius: 10px;
+    }
+    .optionB__btn{
+      border-radius: 10px;
+    }
+    .optionC__btn{
+      border-radius: 10px;
+    }
+    .optionD__btn{
       border-radius: 10px;
     }
 

@@ -13,7 +13,10 @@
 <body>
   <div id="heading">
     <h1>The Chase</h1>
-    <button class="start-btn">Start</button>
+    <div>
+      <button class="start-btn">Start</button>
+      <button class="restart-btn">Reset</button>
+    </div>
   </div>
   <main class="game">
     <section id="chaser-board">
@@ -29,13 +32,13 @@
     </section>
     <section id="question-box">
       <div class="question-display">Q:</div>
-      <button class="option__btn" value="A"></button>
-      <button class="option__btn" value="B"></button>
-      <button class="option__btn" value="C"></button>
-      <button class="option__btn" value="D"></button>
+      <button class="optionA__btn"></button>
+      <button class="optionB__btn"></button>
+      <button class="optionC__btn"></button>
+      <button class="optionD__btn"></button>
     </section>
   
   </main>
-  <script src="assets/style/main.js"></script>
+  <script src="assets/style/main.js" type="module"></script>
 </body>
 </html>
