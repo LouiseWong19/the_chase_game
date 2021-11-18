@@ -74,15 +74,6 @@ body {
   border: 1px solid black;
   text-align: center;
 }
-.game .optionA__btn {
-  border-radius: 10px;
-}
-.game .optionB__btn {
-  border-radius: 10px;
-}
-.game .optionC__btn {
-  border-radius: 10px;
-}
-.game .optionD__btn {
+.game .option__btn {
   border-radius: 10px;
 }

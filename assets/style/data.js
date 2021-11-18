@@ -5,7 +5,7 @@ export const questions = [
     optionB: "Black Hole Blue",
     optionC: "International Orange",
     optionD: "Royal Blue",
-    correctOption: "International Orange"},
+    correctOption: "optionC"},
     // options: ["Worldwide White","Black Hole Blue", "International Orange", "Royal Blue"],
     // correctOption: "International Orange"},
 
@@ -15,7 +15,7 @@ export const questions = [
   optionB: "21 days",
   optionC: "11 months",
   optionD: "11 years",
-  correctOption: "11 days"},
+  correctOption: "optionA"},
   // options: ["11 days", "21 days", "11 months", "11 years"],
   // correctOption: "11 days"},
 
@@ -25,7 +25,7 @@ export const questions = [
   optionB: "March",
   optionC: "April",
   optionD: "May",
-  correctOption: "March"}
+  correctOption: "optionB"}
   // options: ["February", "March", "April", "May"],
   // correctOption: "March"}
 
