@@ -7,16 +7,17 @@ const optionB =document.querySelector("#optionB__btn");
 const optionC =document.querySelector("#optionC__btn");
 const optionD =document.querySelector("#optionD__btn");
 const questionDisplay = document.querySelector(".question-display");
-const startbtn = document.querySelector(".start-btn");
+const startBtn = document.querySelector(".start-btn");
+const nextBtn = document.querySelector(".next-btn");
 
 let currentQuestion = [];
 let questionNumber = 0;
 let chosenAnswer = [];
 
 
-// Print the first Question as the start button has been pressed
+// Start / Reset button
 const startQuestion = () =>{
-  currentQuestion = questions[questionNumber];
+  currentQuestion = questions[0];
   questionDisplay.innerHTML = currentQuestion.question;
   optionA.innerHTML = currentQuestion.optionA;
   optionB.innerHTML = currentQuestion.optionB;
@@ -25,28 +26,9 @@ const startQuestion = () =>{
   console.log(currentQuestion)
 }
 
-startbtn.addEventListener("click",startQuestion);
+startBtn.addEventListener("click",startQuestion);
 
-// let correctAnswer = []
-
-// for(let i = 0; i < questions.length; i++){
-//   correctAnswer.push(questions[i].correctOption)
-// }
-// console.log(correctAnswer)
-
-
-// optionBtn.forEach((options) =>{
-//   options.addEventListener("click", () =>{
-//     chosenAnswer === options.value
-//     if (chosenAnswer === currentQuestion.correctOption){
-//       alert("RIGHT")
-//     } else{
-//       alert("WRONG")
-//     }
-//     console.log(chosenAnswer)
-// })
-// })
-
+// Check answer
 optionBtn.forEach((options) =>{
   options.addEventListener("click", () =>{
     chosenAnswer.push(options.value);
@@ -59,50 +41,19 @@ optionBtn.forEach((options) =>{
 })
 })
 
+// next question button
+const nextQuestion = () =>{
+  questionNumber++;
+  chosenAnswer = [];
+  currentQuestion = questions[questionNumber];
+  questionDisplay.innerHTML = currentQuestion.question;
+  optionA.innerHTML = currentQuestion.optionA;
+  optionB.innerHTML = currentQuestion.optionB;
+  optionC.innerHTML = currentQuestion.optionC;
+  optionD.innerHTML = currentQuestion.optionD;
+}
 
-// const isAnswer = () => {
-//   if(optionA === correctAnswer){
-//     alert("RIGHT")
-//   } else if(optionB === correctAnswer){
-//     alert("RIGHT")
-//   } else if(optionC === correctAnswer){
-//     alert("RIGHT")
-//   } else if(optionD === correctAnswer){
-//     alert("RIGHT")
-//   } else {
-//     alert("WRONG")
-//   }
-// }
-
-// optionBtn.forEach((options) =>{
-//   options.addEventListener("click", () =>{
-//     chosenAnswer.push(options.value);
-//     console.log(chosenAnswer)
-// })
-// })
-
-
-// const answer = answer_op.forEach((optionBtn) =>{
-//   answer_op.addEventListener("click", () =>{
-//     if(optionBtn === questions.correctOption){
-//       alert("This is right!")
-//   } else{
-//     alert("WRONG")
-//   }
-// })
-// })
-
-
-
-
-// const isResult = answer_op.forEach() =>{
-  
-//   if (answer_op === questions.correctOption){
-//     alert("This is right!")
-//   } else{
-//     alert("WRONG")
-//   }
-// }
+nextBtn.addEventListener("click",nextQuestion)
 
 
 

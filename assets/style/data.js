@@ -25,12 +25,17 @@ export const questions = [
   optionB: "March",
   optionC: "April",
   optionD: "May",
-  correctOption: "optionB"}
+  correctOption: "optionB"},
   // options: ["February", "March", "April", "May"],
   // correctOption: "March"}
 
-// {
-//   question: "What does the Welsh word 'sglodion' mean in English?",
+{
+  question: "What does the Welsh word 'sglodion' mean in English?",
+  optionA: "Chips",
+  optionB: "Tea",
+  optionC: "Cardigan",
+  optionD: "Coins",
+  correctOption: "optionA"}
 //   options: ["Chips", "Tea", "Cardigan", "Coins"],
 //   correctOption: "Chips"},
 
