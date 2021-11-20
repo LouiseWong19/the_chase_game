@@ -36,26 +36,9 @@ body {
   align-items: center;
   border: 1px solid black;
 }
-.game #chaser-board {
-  display: grid;
-  grid-template-columns: 230px;
-  grid-template-rows: repeat(9, 40px);
-}
-.game #chaser-board .step {
+.game #score-board {
   display: flex;
-  width: 230px;
-  height: 40px;
-  border: 1px solid black;
-  text-align: center;
-  background-color: #FFFDF9;
-  align-items: center;
-  justify-content: center;
-}
-.game #chaser-board .step:first-child {
-  background-color: #FF4646;
-}
-.game #chaser-board .step:nth-child(3) {
-  background-color: #7FCD91;
+  gap: 20px;
 }
 .game #question-box {
   margin: 10px 0;
@@ -77,3 +60,5 @@ body {
 .game .option__btn {
   border-radius: 10px;
 }
+
+/********************************************************/

@@ -18,6 +18,9 @@ let chosenAnswer = [];
 // Start / Reset button
 const startQuestion = () =>{
   currentQuestion = questions[0];
+  chosenAnswer = [];
+  document.getElementById("step-3").innerHTML = "£50,000";
+  document.getElementById("step-1").classList.add("player");
   questionDisplay.innerHTML = currentQuestion.question;
   optionA.innerHTML = currentQuestion.optionA;
   optionB.innerHTML = currentQuestion.optionB;
@@ -29,17 +32,21 @@ const startQuestion = () =>{
 startBtn.addEventListener("click",startQuestion);
 
 // Check answer
-optionBtn.forEach((options) =>{
-  options.addEventListener("click", () =>{
-    chosenAnswer.push(options.value);
-    if (chosenAnswer == currentQuestion.correctOption){
-      alert("RIGHT")
-    } else{
-      alert("WRONG")
-    }
-    console.log(chosenAnswer)
-})
-})
+// optionBtn.forEach((options) =>{
+//   options.addEventListener("click", () =>{
+//     chosenAnswer.push(options.value);
+    
+//     if (chosenAnswer == currentQuestion.correctOption){
+//       alert("RIGHT")
+//     } else{
+//       alert("WRONG")
+//     }
+//     console.log(chosenAnswer)
+// })
+// })
+
+
+
 
 // next question button
 const nextQuestion = () =>{
@@ -54,6 +61,4 @@ const nextQuestion = () =>{
 }
 
 nextBtn.addEventListener("click",nextQuestion)
-
-
 

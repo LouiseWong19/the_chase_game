@@ -20,30 +20,40 @@
   align-items: center;
   border: 1px solid black;
 
-  #chaser-board{
-    display: grid;
-    grid-template-columns: 230px;
-    grid-template-rows: repeat(9,40px);
-    .step{
-      display: flex;
-      width: 230px;
-      height: 40px;
-      border: 1px solid black;
-      text-align: center;
-      background-color: $tertiary-color;
-      align-items: center;
-      justify-content: center;
+  // #chaser-board{
+  //   display: grid;
+  //   grid-template-columns: 230px;
+  //   grid-template-rows: repeat(9,40px);
+  //   div{
+  //     display: flex;
+  //     width: 230px;
+  //     height: 40px;
+  //     border: 1px solid black;
+  //     text-align: center;
+  //     background-color: $tertiary-color;
+  //     align-items: center;
+  //     justify-content: center;
 
-      &:first-child{
-        background-color: $secondary-color;
-      }
+  //     // &:first-child{
+  //     //   background-color: $secondary-color;
+  //     // }
       
-      &:nth-child(3){
-        background-color: $primary-color;
-      }
-    }
+  //     // &:nth-child(3){
+  //     //   background-color: $primary-color;
+  //     // }
+  //     .chaser{
+  //       background-color: $secondary-color;
+  //     }
+  //     .player{
+  //       background-color: $primary-color;
+  //     }
+  //   }
   
 
+  // }
+  #score-board{
+    display: flex;
+    gap: 20px;
   }
 
   #question-box{
@@ -74,6 +84,3 @@
 }
 
 /********************************************************/
-// .step-2{
-  
-// }
