@@ -1,6 +1,6 @@
 import {questions} from "./data.js";
 
-const step = document.querySelectorAll(".step");
+// const step = document.querySelectorAll(".step");
 const optionBtn = document.querySelectorAll(".option__btn");
 const optionA =document.querySelector("#optionA__btn");
 const optionB =document.querySelector("#optionB__btn");
@@ -9,18 +9,31 @@ const optionD =document.querySelector("#optionD__btn");
 const questionDisplay = document.querySelector(".question-display");
 const startBtn = document.querySelector(".start-btn");
 const nextBtn = document.querySelector(".next-btn");
+const score = document.querySelector(".score");
+const timer = document.querySelector(".timer");
 
 let currentQuestion = [];
 let questionNumber = 0;
 let chosenAnswer = [];
 
 
-// Start / Reset button
+// Timer
+let time = timer.innerHTML;
+const countDown = () =>{
+  time --;
+  timer.innerHTML = time;
+  if (time <= 0){
+    timer.innerHTML = "TIME'S UP!";
+    clearInterval(countingDown);
+  }
+}
+
+
+// Start button
 const startQuestion = () =>{
   currentQuestion = questions[0];
-  chosenAnswer = [];
-  document.getElementById("step-3").innerHTML = "£50,000";
-  document.getElementById("step-1").classList.add("player");
+  // document.getElementById("step-3").innerHTML = "£50,000";
+  // document.getElementById("step-1").classList.add("player");
   questionDisplay.innerHTML = currentQuestion.question;
   optionA.innerHTML = currentQuestion.optionA;
   optionB.innerHTML = currentQuestion.optionB;
@@ -29,13 +42,27 @@ const startQuestion = () =>{
   console.log(currentQuestion)
 }
 
-startBtn.addEventListener("click",startQuestion);
+// Reset button
+const reset = () => {
+  chosenAnswer = [];
+  time = 61;
+}
 
-// Check answer
+startBtn.addEventListener("click",startQuestion);
+startBtn.addEventListener("click",reset);
+startBtn.addEventListener("click",countingDown = setInterval(countDown,1000));
+
+// // Score counter
+// let playerScore = score.innerHTML;
+// const recordScore = () =>{
+//   playerScore++;
+//   score.innerHTML = playerScore;
+// }
+
+// //Check answer
 // optionBtn.forEach((options) =>{
 //   options.addEventListener("click", () =>{
-//     chosenAnswer.push(options.value);
-    
+//     chosenAnswer.push(options.value); 
 //     if (chosenAnswer == currentQuestion.correctOption){
 //       alert("RIGHT")
 //     } else{
@@ -44,8 +71,6 @@ startBtn.addEventListener("click",startQuestion);
 //     console.log(chosenAnswer)
 // })
 // })
-
-
 
 
 // next question button
@@ -61,4 +86,5 @@ const nextQuestion = () =>{
 }
 
 nextBtn.addEventListener("click",nextQuestion)
+
 
