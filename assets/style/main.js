@@ -9,7 +9,7 @@ const optionD =document.querySelector("#optionD__btn");
 const questionDisplay = document.querySelector(".question-display");
 const startBtn = document.querySelector(".start-btn");
 const nextBtn = document.querySelector(".next-btn");
-const score = document.querySelector(".score");
+const score = document.querySelector("#score");
 const timer = document.querySelector(".timer");
 
 let currentQuestion = [];
@@ -46,31 +46,32 @@ const startQuestion = () =>{
 const reset = () => {
   chosenAnswer = [];
   time = 61;
+  playerScore = 0;
 }
 
-startBtn.addEventListener("click",startQuestion);
-startBtn.addEventListener("click",reset);
-startBtn.addEventListener("click",countingDown = setInterval(countDown,1000));
+const countingDown = setInterval(countDown,1000);
 
-// // Score counter
-// let playerScore = score.innerHTML;
-// const recordScore = () =>{
-//   playerScore++;
-//   score.innerHTML = playerScore;
-// }
 
-// //Check answer
-// optionBtn.forEach((options) =>{
-//   options.addEventListener("click", () =>{
-//     chosenAnswer.push(options.value); 
-//     if (chosenAnswer == currentQuestion.correctOption){
-//       alert("RIGHT")
-//     } else{
-//       alert("WRONG")
-//     }
-//     console.log(chosenAnswer)
-// })
-// })
+// Score counter
+let playerScore = score.innerHTML;
+const recordScore = () =>{
+  playerScore++;
+  score.innerHTML = playerScore;
+}
+
+//Record answer
+optionBtn.forEach((options) =>{
+  options.addEventListener("click", () =>{
+    chosenAnswer.push(options.value);
+    if (chosenAnswer == currentQuestion.correctOption){
+      playerScore++;
+      score.innerHTML = playerScore;
+    }
+    nextQuestion()
+    console.log(chosenAnswer)
+})
+})
+
 
 
 // next question button
@@ -86,5 +87,8 @@ const nextQuestion = () =>{
 }
 
 nextBtn.addEventListener("click",nextQuestion)
+startBtn.addEventListener("click",startQuestion);
+startBtn.addEventListener("click",reset);
+startBtn.addEventListener("click", countDown);
 
 
