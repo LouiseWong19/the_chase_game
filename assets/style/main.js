@@ -7,18 +7,19 @@ const optionB =document.querySelector("#optionB__btn");
 const optionC =document.querySelector("#optionC__btn");
 const optionD =document.querySelector("#optionD__btn");
 const questionDisplay = document.querySelector(".question-display");
-const startBtn = document.querySelector(".start-btn");
-const nextBtn = document.querySelector(".next-btn");
+const startBtn = document.querySelector(".heading__start-btn");
+const resetBtn = document.querySelector(".heading__reset-btn");
 const score = document.querySelector("#score");
 const timer = document.querySelector(".timer");
 
 let currentQuestion = [];
 let questionNumber = 0;
 let chosenAnswer = [];
-
+let time = 60;
+let playerScore = 0;
 
 // Timer
-let time = timer.innerHTML;
+//let time = timer.innerHTML;
 const countDown = () =>{
   time --;
   timer.innerHTML = time;
@@ -28,12 +29,14 @@ const countDown = () =>{
   }
 }
 
+const countingDown = () => {
+  setInterval(countDown,1000);
+}
+
 
 // Start button
-const startQuestion = () =>{
-  currentQuestion = questions[0];
-  // document.getElementById("step-3").innerHTML = "£50,000";
-  // document.getElementById("step-1").classList.add("player");
+const startQuestion = (questionNumber) =>{
+  currentQuestion = questions[questionNumber];
   questionDisplay.innerHTML = currentQuestion.question;
   optionA.innerHTML = currentQuestion.optionA;
   optionB.innerHTML = currentQuestion.optionB;
@@ -42,18 +45,9 @@ const startQuestion = () =>{
   console.log(currentQuestion)
 }
 
-// Reset button
-const reset = () => {
-  chosenAnswer = [];
-  time = 61;
-  playerScore = 0;
-}
-
-const countingDown = setInterval(countDown,1000);
-
 
 // Score counter
-let playerScore = score.innerHTML;
+//let playerScore = score.innerHTML;
 const recordScore = () =>{
   playerScore++;
   score.innerHTML = playerScore;
@@ -68,13 +62,12 @@ optionBtn.forEach((options) =>{
       score.innerHTML = playerScore;
     }
     nextQuestion()
-    console.log(chosenAnswer)
+    //console.log(chosenAnswer)
 })
 })
 
 
-
-// next question button
+// Next question 
 const nextQuestion = () =>{
   questionNumber++;
   chosenAnswer = [];
@@ -86,9 +79,23 @@ const nextQuestion = () =>{
   optionD.innerHTML = currentQuestion.optionD;
 }
 
-nextBtn.addEventListener("click",nextQuestion)
-startBtn.addEventListener("click",startQuestion);
-startBtn.addEventListener("click",reset);
-startBtn.addEventListener("click", countDown);
+// Reset button
+const reset = () => {
+  chosenAnswer = [];
+  time = 60;
+  playerScore = 0;
+  score.innerHTML = playerScore;
+  questionNumber = 0;
+  startQuestion(0);
+
+}
+
+// const reset = () => {
+//   document.location.reload();
+// }
+
+startBtn.addEventListener("click",startQuestion(0));
+resetBtn.addEventListener("click",reset);
+startBtn.addEventListener("click", countingDown);
 
 

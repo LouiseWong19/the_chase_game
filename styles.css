@@ -7,9 +7,19 @@ body {
   font-family: "Proza Libre", sans-serif;
 }
 
+button {
+  font-family: "Proza Libre", sans-serif;
+}
+
 h1 {
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 30px;
+  margin-top: 50px;
 }
 
 body {
@@ -27,25 +37,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+#heading .heading__start-btn, #heading .heading__reset-btn {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 .game {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
 }
 .game #score-board {
   display: flex;
   gap: 20px;
+  height: 100px;
 }
 .game #question-box {
   margin: 10px 0;
   padding: 25px;
   background-color: #FFFDF9;
   display: grid;
-  grid-template-columns: 130px 130px;
+  grid-template-columns: 145px 145px;
   grid-template-rows: 30px 30px 30px 30px;
   row-gap: 30px;
   column-gap: 38px;
@@ -59,6 +74,12 @@ body {
 }
 .game .option__btn {
   border-radius: 10px;
+}
+.game .option__btn .correctAnswer {
+  background-color: #7FCD91;
+}
+.game .option__btn .wrongAnswer {
+  background-color: #FF4646;
 }
 
 /********************************************************/

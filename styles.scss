@@ -11,49 +11,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  .heading__start-btn, .heading__reset-btn{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
 }
 
 .game{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+  //border: 1px solid black;
 
-  // #chaser-board{
-  //   display: grid;
-  //   grid-template-columns: 230px;
-  //   grid-template-rows: repeat(9,40px);
-  //   div{
-  //     display: flex;
-  //     width: 230px;
-  //     height: 40px;
-  //     border: 1px solid black;
-  //     text-align: center;
-  //     background-color: $tertiary-color;
-  //     align-items: center;
-  //     justify-content: center;
-
-  //     // &:first-child{
-  //     //   background-color: $secondary-color;
-  //     // }
-      
-  //     // &:nth-child(3){
-  //     //   background-color: $primary-color;
-  //     // }
-  //     .chaser{
-  //       background-color: $secondary-color;
-  //     }
-  //     .player{
-  //       background-color: $primary-color;
-  //     }
-  //   }
-  
-
-  // }
   #score-board{
     display: flex;
     gap: 20px;
+    height: 100px;
   }
 
 
@@ -62,7 +37,7 @@
     padding: 25px;
     background-color: $tertiary-color;
     display: grid;
-    grid-template-columns: 130px 130px;
+    grid-template-columns: 145px 145px;
     grid-template-rows: 30px 30px 30px 30px;
     row-gap: 30px;
     column-gap: 38px;
