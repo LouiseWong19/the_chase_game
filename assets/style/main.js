@@ -27,21 +27,20 @@ const countDown = () =>{
     clearInterval(countingDown);
   }
 }
-
-const countingDown = () => {
+const handleCountDown = () => {
   setInterval(countDown,1000);
 }
 
 
 // Start button
-const startQuestion = (questionNumber) =>{
+const getQuestion = (questionNumber) =>{
   currentQuestion = questions[questionNumber];
   questionDisplay.innerHTML = currentQuestion.question;
   optionA.innerHTML = currentQuestion.optionA;
   optionB.innerHTML = currentQuestion.optionB;
   optionC.innerHTML = currentQuestion.optionC;
   optionD.innerHTML = currentQuestion.optionD;
-  console.log(currentQuestion)
+  //console.log(currentQuestion)
 }
 
 
@@ -72,12 +71,12 @@ const nextQuestion = () =>{
 }
 
 // Reset button
-const reset = () => {
+const handleReset = () => {
   chosenAnswer = [];
   playerScore = 0;
   score.innerHTML = playerScore;
   questionNumber = 0;
-  startQuestion(0);
+  getQuestion(0);
   time = 60;
 }
 
@@ -86,8 +85,8 @@ const reset = () => {
 //   document.location.reload();
 // }
 
-startBtn.addEventListener("click",startQuestion(0));
-startBtn.addEventListener("click", countingDown);
-resetBtn.addEventListener("click",reset);
+startBtn.addEventListener("click",getQuestion(0));
+startBtn.addEventListener("click", handleCountDown);
+resetBtn.addEventListener("click",handleReset);
 
 

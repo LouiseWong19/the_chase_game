@@ -97,11 +97,3 @@ button:hover {
   font-size: 18px;
   padding: 7px;
 }
-.game .option__btn .correctAnswer {
-  background-color: #7FCD91;
-}
-.game .option__btn .wrongAnswer {
-  background-color: #FF4646;
-}
-
-/********************************************************/
