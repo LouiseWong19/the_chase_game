@@ -1,6 +1,17 @@
 body {
-  background-color: #FFE3ED;
+  background-color: #B2B1B9;
   color: #2C2E43;
+}
+
+button {
+  background: #FFFDF9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #FFD523;
+  transition: 0.3s;
 }
 
 body {
@@ -23,8 +34,19 @@ p {
 }
 
 body {
-  background-color: #FFE3ED;
+  background-color: #B2B1B9;
   color: #2C2E43;
+}
+
+button {
+  background: #FFFDF9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #FFD523;
+  transition: 0.3s;
 }
 
 * {
@@ -43,7 +65,6 @@ body {
 #heading .heading__start-btn, #heading .heading__reset-btn {
   padding: 10px;
   font-size: 20px;
-  border-radius: 10px;
 }
 
 .game {
@@ -75,9 +96,6 @@ body {
   text-align: center;
   font-size: 18px;
   padding: 7px;
-}
-.game .option__btn {
-  border-radius: 10px;
 }
 .game .option__btn .correctAnswer {
   background-color: #7FCD91;

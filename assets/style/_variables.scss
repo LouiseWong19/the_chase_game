@@ -1,12 +1,22 @@
-//$background-color: #316B83;
-$background-color: #FFE3ED;
+$background-color: #B2B1B9;
 $primary-color: #7FCD91;
 $secondary-color: #FF4646;
 $tertiary-color: #FFFDF9;
-//$font-color: #171717;
 $font-color: #2C2E43;
 
 body{
   background-color: $background-color;
   color: $font-color;
+}
+
+button{
+  background: $tertiary-color;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button:hover{
+  background-color: #FFD523;
+  transition: 0.3s;
+  
 }

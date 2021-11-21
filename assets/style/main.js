@@ -9,8 +9,8 @@ const optionD =document.querySelector("#optionD__btn");
 const questionDisplay = document.querySelector(".question-display");
 const startBtn = document.querySelector(".heading__start-btn");
 const resetBtn = document.querySelector(".heading__reset-btn");
-const score = document.querySelector("#score");
-const timer = document.querySelector(".timer");
+const score = document.querySelector("#score-board__score");
+const timer = document.querySelector(".score-board__timer");
 
 let currentQuestion = [];
 let questionNumber = 0;
@@ -19,7 +19,6 @@ let time = 60;
 let playerScore = 0;
 
 // Timer
-//let time = timer.innerHTML;
 const countDown = () =>{
   time --;
   timer.innerHTML = time;
@@ -46,23 +45,16 @@ const startQuestion = (questionNumber) =>{
 }
 
 
-// Score counter
-//let playerScore = score.innerHTML;
-const recordScore = () =>{
-  playerScore++;
-  score.innerHTML = playerScore;
-}
 
-//Record answer
+// Check answer & Update score
 optionBtn.forEach((options) =>{
   options.addEventListener("click", () =>{
     chosenAnswer.push(options.value);
     if (chosenAnswer == currentQuestion.correctOption){
       playerScore++;
-      score.innerHTML = playerScore;
+      score.innerHTML = `£` + playerScore*100;
     }
     nextQuestion()
-    //console.log(chosenAnswer)
 })
 })
 
@@ -82,13 +74,13 @@ const nextQuestion = () =>{
 // Reset button
 const reset = () => {
   chosenAnswer = [];
-  time = 60;
   playerScore = 0;
   score.innerHTML = playerScore;
   questionNumber = 0;
   startQuestion(0);
-
+  time = 60;
 }
+
 
 // const reset = () => {
 //   document.location.reload();
