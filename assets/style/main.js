@@ -87,7 +87,7 @@ const reset = () => {
 // }
 
 startBtn.addEventListener("click",startQuestion(0));
-resetBtn.addEventListener("click",reset);
 startBtn.addEventListener("click", countingDown);
+resetBtn.addEventListener("click",reset);
 
 
