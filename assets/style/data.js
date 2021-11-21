@@ -1,13 +1,11 @@
 export const questions = [
   {
-    question: "What colour shade was used by Nasa for its Space Shuttle suits?",
-    optionA: "Worldwide White",
-    optionB: "Black Hole Blue",
-    optionC: "International Orange",
-    optionD: "Royal Blue",
+    question: "Who discovered the wreckage of the Titanic?",
+    optionA: "D. Michael Harris",
+    optionB: "Jack Grimm",
+    optionC: "Robert Ballard",
+    optionD: "George Tulloch",
     correctOption: "optionC"},
-    // options: ["Worldwide White","Black Hole Blue", "International Orange", "Royal Blue"],
-    // correctOption: "International Orange"},
 
 {
   question: "How long after the execution of Anne Boleyn did Henry VIII marry Jane Seymour?",

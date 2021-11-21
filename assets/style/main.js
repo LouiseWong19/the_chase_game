@@ -24,7 +24,7 @@ const countDown = () =>{
   time --;
   timer.innerHTML = time;
   if (time <= 0){
-    timer.innerHTML = "TIME'S UP!";
+    timer.innerHTML = "TIME'S UP!"; 
     clearInterval(countingDown);
   }
 }
